@@ -1,10 +1,11 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path";
 import { componentTagger } from "lovable-tagger";
+import path from "path";
+import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig(({ mode }) => ({
+  base: "/pomodoro/",
   server: {
     host: "::",
     port: 8080,
@@ -26,7 +27,7 @@ export default defineConfig(({ mode }) => ({
         background_color: "#D4C4F5",
         display: "standalone",
         orientation: "portrait",
-        start_url: "/",
+        start_url: "/pomodoro/",
         icons: [
           {
             src: "/favicon.ico",
